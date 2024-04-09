@@ -1,4 +1,4 @@
-export const post = {
+export const skill = {
     name: 'skill',
     title: 'Skill',
     type: 'document',

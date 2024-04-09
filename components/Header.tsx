@@ -12,13 +12,16 @@ export default function Header({ }: Props) {
             <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex-row flex items-center'>
                 {/* Social Icons */}
                 <SocialIcon url="https://www.youtube.com/@samintaheri2090" fgColor='gray' bgColor='transparent' />
-                <SocialIcon url="https://www.youtube.com/@samintaheri2090" fgColor='gray' bgColor='transparent' />
-                <SocialIcon url="https://www.youtube.com/@samintaheri2090" fgColor='gray' bgColor='transparent' />
+                <SocialIcon url="https://www.linkedin.com/in/samintaheri/" fgColor='gray' bgColor='transparent' />
+                <SocialIcon url="https://twitter.com/samintaheriii" fgColor='gray' bgColor='transparent' />
             </motion.div>
             <Link href={"#contact"}>
                 <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row items-center text-gray-300 cursor-pointer'>
-                    <SocialIcon className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent' />
-                    <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch!</p>
+                    {/* <SocialIcon className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent' /> */}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="gray" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>
+                    <p className='uppercase hidden md:inline-flex text-sm text-gray-400 pl-3'>Get In Touch!</p>
                 </motion.div>
             </Link>
         </header>

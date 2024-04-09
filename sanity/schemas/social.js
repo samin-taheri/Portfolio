@@ -1,4 +1,4 @@
-export const post = {
+export const social = {
     name: 'social',
     title: 'Social',
     type: 'document',

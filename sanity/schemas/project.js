@@ -1,4 +1,4 @@
-export const post = {
+export const project = {
     name: 'project',
     title: 'Project',
     type: 'document',

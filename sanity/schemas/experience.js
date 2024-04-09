@@ -1,4 +1,4 @@
-export const post = {
+export const experience = {
     name: 'experience',
     title: 'Experience',
     type: 'document',

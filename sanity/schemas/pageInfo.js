@@ -1,4 +1,4 @@
-export const post = {
+export const pageInfo = {
   name: 'pageInfo',
   title: 'PageInfo',
   type: 'document',
