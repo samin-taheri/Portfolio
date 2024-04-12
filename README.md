@@ -1,4 +1,4 @@
-<img width="1438" alt="Screenshot 2024-04-12 at 20 54 51" src="https://github.com/samin-taheri/Portfolio/assets/58706708/d0aecbe1-abdb-448f-9ac5-d0ed2d302cf0">### Portfolio using Next.js and Sanity
+### Portfolio made by Next.js and Sanity.
 
 
 
