@@ -8,6 +8,7 @@ type Props = {
     skill: Skill;
 }
 
+
 function SkillCard({ directionLeft, skill }: Props) {
     return (
         <div className='group relative flex cursor-pointer'>
