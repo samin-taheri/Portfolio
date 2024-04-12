@@ -5,8 +5,17 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
+import { Skill, Social, Experiences, PageInfo, Project } from '@/typings';
 import type { NextPage } from 'next'
 import Link from 'next/link';
+
+type Props = {
+  pageInfo: PageInfo;
+  skills: Skill[];
+  socials: Social[];
+  experiences: Experiences[];
+  projects: Project[];
+}
 
 const Home: NextPage = () => {
 
@@ -51,3 +60,21 @@ const Home: NextPage = () => {
   )
 }
 export default Home;
+
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const pageInfo: PageInfo[] = await fetchPageInfo();
+//   const experiences: Experiences[] = await fetchExperience();
+//   const skills: Skill[] = await fetchSkills();
+//   const socials: Social[] = await fetchSocials();
+//   const project: Project[] = await fetchProjects();
+
+//   return {
+//     props: {
+//       pageInfo,
+//       experiences,
+//       skills,
+//       socials,
+//       project
+//     }
+//   }
+// }
