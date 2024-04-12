@@ -11,7 +11,6 @@ const query = groq`
     }
 `
 
-
 type Data = {
     projects: Project[]
 }
