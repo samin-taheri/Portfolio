@@ -1,10 +1,22 @@
 import { Skill } from "@/typings";
 
 export const fetchSkills = async () => {
-    const res = await fetch(`${process.env.SANITY_STUDIO_BASE_URL}/api/getSkills`);
+    try {
+        const response = await fetch("/api/skills", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
 
-    const data = await res.json(); // Await the promise to get the actual data
-    const skills: Skill[] = data.skills;
+        if (!response.ok) {
+            throw new Error(`Failed in skill fetch with status: ${response.status}`);
+        }
+        const resp = await response.json();
+        const skill: Skill[] = resp.skills;
+        return skill;
 
-    return skills;
-}
+    } catch (error) {
+        console.error("Error in handleGetSkill:", error);
+    }
+};

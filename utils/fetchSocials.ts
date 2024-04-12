@@ -1,10 +1,22 @@
 import { Social } from "@/typings";
 
 export const fetchSocials = async () => {
-    const res = await fetch(`${process.env.SANITY_STUDIO_BASE_URL}/api/getSocials`);
+    try {
+        const response = await fetch("/api/socials", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
 
-    const data = await res.json(); // Await the promise to get the actual data
-    const socials: Social[] = data.socials;
+        if (!response.ok) {
+            throw new Error(`Failed in socials fetch with status: ${response.status}`);
+        }
+        const resp = await response.json();
+        const socials: Social[] = resp.socials;
+        return socials;
 
-    return socials;
-}
+    } catch (error) {
+        console.error("Error in handleGetSocials:", error);
+    }
+};
