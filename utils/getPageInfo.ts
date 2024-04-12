@@ -1,10 +1,22 @@
 import { PageInfo } from "@/typings";
 
 export const fetchPageInfo = async () => {
-    const res = await fetch(`${process.env.SANITY_STUDIO_BASE_URL}/api/getPageInfo`);
+    try {
+        const response = await fetch("/api/pageInfo", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
 
-    const data = await res.json(); // Await the promise to get the actual data
-    const pageInfo: PageInfo[] = data.pageInfo;
+        if (!response.ok) {
+            throw new Error(`Failed in pageInfo fetch with status: ${response.status}`);
+        }
+        const resp = await response.json();
+        const pageInfo: PageInfo = resp.pageInfo;
+        return pageInfo;
 
-    return pageInfo;
-}
+    } catch (error) {
+        console.error("Error in handleGetPageInfo:", error);
+    }
+};

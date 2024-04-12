@@ -58,6 +58,7 @@ export interface Experiences extends sanityBody {
     jobTitle: string;
     points: string[];
     technologies: Technology[];
+    companyImage: Image;
 }
 
 export interface Social extends sanityBody {
